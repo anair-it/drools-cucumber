@@ -1,0 +1,6 @@
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+ 	<kbase name="playlist.kbase" default="true" eventProcessingMode="stream" equalsBehavior="equality" packages="playlist"> 
+     	<ksession name="playlist.stateless.session" type="stateless" default="true" clockType="realtime"/> 
+   	</kbase> 
+</kmodule>

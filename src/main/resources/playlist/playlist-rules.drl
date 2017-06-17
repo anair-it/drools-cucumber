@@ -1,0 +1,23 @@
+package playlist
+
+import playlist.*;
+
+global Response response
+
+rule "More than 10 songs in the playlist"
+	when
+		$playlist: Playlist(songs.size > 10)
+	then
+		response.add("Playlist" + $playlist.getName() + "has more than 10 songs.");
+end
+
+
+rule "Find Rock songs by Metallica"
+	when
+		$playlist: Playlist($songs: songs)
+		$song: Song(genre == Song.Genre.ROCK, artist!.name == 'Metallica') from $songs
+	then
+		response.add("Found Metallica song: " + $song.getTitle());
+		
+end
+

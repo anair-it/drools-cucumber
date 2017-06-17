@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration name="playlist">
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%m%n" />
+		</Console>
+		
+		<Async name="async">
+			<AppenderRef ref="console" />
+		</Async>
+	</Appenders>
+
+	<Loggers>
+    	<logger name="org.anair" level="error"/>
+    	<logger name="rules-audit" level="info"/>
+		<logger name="org.springframework" level="error" />
+		<logger name="org.apache" level="error" />
+		<logger name="org.eclipse" level="error" />
+		<logger name="org.kie" level="error" />
+		<logger name="org.drools" level="error" />
+    	<logger name="com.joestelmach" level="error"/>
+		<logger name="info.cukes" level="info"/>
+		
+		<Root level="debug">
+			<AppenderRef ref="async" />
+		</Root>
+		
+	</Loggers>
+</Configuration>
