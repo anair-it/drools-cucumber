@@ -6,6 +6,13 @@
 	<artifactId>drools-cucumber</artifactId>
 	<version>0.0.1</version>
 
+	<developers>
+		<developer>
+			<name>Anoop Nair</name>
+			<email>anoopnair.it@gmail.com</email>
+		</developer>
+	</developers>
+
 	<properties>
 		<java.version>1.8</java.version>
 		<drools-support.version>0.0.1</drools-support.version>
